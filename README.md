@@ -1,2 +1,2 @@
 # sample-code
-Contains sample code for different demos
+Contains sample code for multiple demos
