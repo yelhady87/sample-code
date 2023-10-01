@@ -1,0 +1,29 @@
+spring:
+  banner:
+    location: classpath:/banner.txt
+
+logging:
+  level:
+    root: info
+    org.springframework.web: debug
+
+server:
+  port: 8088
+
+web-app:
+  allowed-origins: http://localhost:8088, http://127.0.0.1:8080
+  api-key: <a random string that is used to secure the end points> #for example: KN2wjt3qKGaMuN9xBo1E
+
+incorta:
+  always-load: true # if true, after each add-record or update-record API call the serivce will trigger the schema load endpoint configured below
+  load-service-url: <YOUR_HOST_NAME>/incorta/api/v2/<TENANT_NAME>/schema/load
+  service-timeout: 20_000
+  synchronous: true # If true, the service will wait till the Schema is loaded successfully.
+  load-source: FULL # Incorta's LOAD source (FULL, Staging, etc) FULL means that it will trigger a full-load
+  user-PAT: <USER-PAT> the PAT for the user that is going to trigger the load. (Add a link in the documentation)
+
+#Replace these values with your own Google Cloud Storage credentials and bucket name
+gcs:
+  project-id: <THE GCS PROJECT ID>
+  bucket-name: <GCS BUCKET NAME>
+  credentials-file-path: <GCS BUCKET CREDENTIALS FILE>

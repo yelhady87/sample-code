@@ -1,0 +1,15 @@
+web-app:
+  allowed-origins: http://localhost:8088, https://secured.com
+
+incorta:
+  always-load: false
+  service-timeout: 20_000
+  synchronous: false
+  load-source: FULL
+  user-PAT: my-pat
+
+#Replace these values with your own Google Cloud Storage credentials and bucket name
+gcs:
+  project-id: my-gcs-project
+  credentials-file-path: /path/to/credentials.json
+  bucket-name: my-bucket
