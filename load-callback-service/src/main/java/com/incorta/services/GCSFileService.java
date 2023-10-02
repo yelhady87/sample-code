@@ -52,6 +52,10 @@ public class GCSFileService {
 
         // Write the final file contents to GCS
         flushToBucket(tempFile, request.getDataFile());
+
+        //Attempt to delete the temp file
+        File toDelete = new File(tempFile);
+        toDelete.delete();
     }
 
     private void flushToBucket(String srcFilename, String destFilename) {

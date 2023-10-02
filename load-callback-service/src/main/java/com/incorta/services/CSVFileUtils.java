@@ -17,6 +17,10 @@ import java.util.UUID;
 
 public class CSVFileUtils {
 
+    private CSVFileUtils() {
+        //left empty
+    }
+
     private static final Logger logger = LoggerFactory.getLogger(CSVFileUtils.class);
 
 

@@ -6,7 +6,7 @@ public class DateUtils {
     }
 
     public static String toDateTimestamp(long epoch) {
-        return new java.text.SimpleDateFormat("yyyy-MM-dd-HH:mm:ss").format(new java.util.Date (epoch));
+        return new java.text.SimpleDateFormat("dd-MM-yyyy-HH:mm:ss").format(new java.util.Date (epoch));
     }
 
 }
