@@ -3,8 +3,10 @@ plugins {
 	id 'org.springframework.boot' version '2.5.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'com.google.cloud.tools.jib' version '3.1.2'
+//	id 'com.google.cloud.tools.jib' version '3.4.0' // try to upgrade
 	id 'java'
 	id 'idea'
+
 }
 
 group = 'com.incorta.sample'
@@ -31,4 +33,17 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+
+// Documentation => https://github.com/GoogleContainerTools/jib/blob/master/jib-gradle-plugin/README.md#example
+jib {
+	to {
+		image = 'yelhady/load-callback-service'
+	}
+
+	container {
+		jvmFlags = ['--gcs.credentials-file']
+		creationTime = "USE_CURRENT_TIMESTAMP"
+	}
 }
