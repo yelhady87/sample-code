@@ -1,4 +1,4 @@
-package com.incorta;
+package com.incorta.services;
 
 import com.incorta.config.IncortaConfiguration;
 import lombok.Builder;

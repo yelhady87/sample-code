@@ -1,6 +1,6 @@
 package com.incorta.webapi.resources;
 
-import com.incorta.IncortaLoaderService;
+import com.incorta.services.IncortaLoaderService;
 import com.incorta.config.IncortaConfiguration;
 import com.incorta.config.WebAppConfiguration;
 import com.incorta.exceptions.GenericRuntimeException;
